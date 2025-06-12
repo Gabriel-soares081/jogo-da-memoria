@@ -6,3 +6,11 @@
 .back {
     color:red
 }
+
+h1 {
+    text-align: center;
+}
+
+.button:hover {
+    color:yellow
+}

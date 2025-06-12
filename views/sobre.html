@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da memoria-sobre</title>
  <link rel="stylesheet" href="../styles/sobre.CSS">
+<script>
+    function criadores(){
+        document.getElementById("informações de criadores").style.display = "block";
+    }
+</script>
+
+
 </head>
 <body>
     <h1>você acessou a pagina sobre</h1>
     <h3>Criadores:</h3>
-    <h5>Ewerton <br>
+    
+    <button class="button" onclick="criadores()">Mostrar criadores</button>
+    <div id="informações de criadores" style="display: none;">  
+        Ewerton<br>
         Tyler<br>
         Adrielly <br>
         Ian<br>
         Gabriel<br>
-    </h5>
+    </div><br>
     <a class="back" href="../index.html">voltar ao menu</a>
 </body>
 </html>
