@@ -50,3 +50,12 @@ body {
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.container-slider {
+    display: flex;
+   width: 100%;
+   min-height: 100vh;
+   align-items: center
+   justify-content: center;
+
+}
