@@ -1,24 +1,52 @@
 body {
-    background-image: url("https://img.freepik.com/fotos-premium/fundo-preto-da-parede-de-concreto-aspero-com-luzes-de-neon-e-luzes-brilhantes-efeito-de-luz-rosa-roxo-e-azul-na-parede-de-cimento-vazia_35257-949.jpg?semt=ais_hybrid&w=740");
+    background: linear-gradient(135deg, red, yellow);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .back {
+    
     color:red
+    
 }
 
 .h1 {
     text-align: center;
+    color: white;
 }
 
-.button:hover {
-    color:yellow
+.button {
+    text-align: center;
+    color:red;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
 }
+
 
 .btt {
     align-items: center;
+}
+
+#informacoesdeCriadores {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, red, yellow);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
