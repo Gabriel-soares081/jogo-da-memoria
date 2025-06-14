@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da memoria-sobre</title>
- <link rel="stylesheet" href="../styles/sobre.CSS">
-<script>
-    function criadores(){
-        document.getElementById("informações de criadores").style.display = "block";
-    }
-</script>
+    <link rel="stylesheet" href="../styles/sobre.CSS">
 
 
 </head>
+
 <body>
-   <a href="C:\Users\ewert\OneDrive\Desktop\Public\sunsets.png.jpg"></a>
-    <h1 class="h1">você acessou a pagina sobre</h1>
-    <h3 class="h1">Criadores:</h3>
+
+    <div class="container">
+        <h1 class="h1">você acessou a pagina sobre</h1>
+        <h3 class="h1">Criadores:</h3>
     
-    <button class="button" onclick="criadores()">Mostrar criadores</button>
-    <div style="display: flex; justify-content: center;" id="informações de criadores" style="display: none;">  
-        Ewerton<br>
-        Tyler<br>
-        Adrielly <br>
-        Ian<br>
-        Gabriel<br>
-    </div><br>
-    <a class="back" href="../index.html">voltar ao menu</a>
+        <button style="color: crimson;" class="button" onclick="criadores()">Mostrar criadores</button>
+        <ul id="informacoesdeCriadores" style="display: none; color: white;">
+            <li>Ewerton</li>
+            <li>Tyler</li>
+            <li>Adrielly </li>
+            <li>Ian</li>
+            <li>Gabriel</li>
+    
+        </ul><br>
+        <a class="back" href="../index.html">voltar ao menu</a>
+    </div>
+    <script>
+        function criadores() {
+            const el = document.getElementById("informacoesdeCriadores");
+
+            if (el.style.display === "none") {
+                el.style.display = "block";
+            } else {
+                el.style.display = "none";
+            }
+        }
+    </script>
 </body>
+
 </html>
