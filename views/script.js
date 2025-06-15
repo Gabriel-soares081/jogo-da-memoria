@@ -1,36 +1,27 @@
-const slider = document.querySelectorAll('.slider');
-const btnPrev = document.getElementbyid('prev-button');
-const btnNext = document.getElementById('next-button'); 
+new Swiper('.card-wrapper', {
+  loop: true,
+  spaceBetween: 30,
+  // Pagination bullets
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-let currentSlide = 0;
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+//responsive breakpoints
 
-function hideSlider() {
-    slider.forEach(item => item.classList.remove('on'))
-}
-
-function showSlider() {
-    slider[currentSlide].classList.add('on');
-}
-
-function nextSlide() {
-    hideSlider()
-  if(currentSlide === slider.length - 1) {
-    currentSlide = 0
-  }  else {
-    currentSlide++;
+  breeakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+     768: {
+      slidesPerView: 2,
+    },
+     1024: {
+      slidesPerView: 3,
+    },
   }
-    showSlider
-    }
-
-    function prevSlide() {
-    hideSlider();
-  if(currentSlide === 0) {
-    currentSlide = slider.length - 1
-  }  else {
-    currentSlide--
-  }
-    showSlider()
-    }
-
-btnNext.addEventListener('click', nextSlide)
-btnPrev.addEventListener('click', prevSlide)
+});
