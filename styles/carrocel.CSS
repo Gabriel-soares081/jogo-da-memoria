@@ -16,11 +16,31 @@ body {
     background: linear-gradient(#ECEFFE, #CED6FB);
 }
 
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.card-list {
+    transition: 0.2s ease;
+}
+
 .card-list .card-item {
     list-style: none;
 }
 .card-list .card-item .card-link {
-    user-select: none;
+   width: 400px;
     display: block;
     background-color: #fff;
     padding: 18px; 
@@ -38,7 +58,7 @@ body {
 
 .card-list .card-link .card-image {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 10px;   
 }
