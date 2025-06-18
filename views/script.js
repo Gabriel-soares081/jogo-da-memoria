@@ -1,27 +1,36 @@
-new Swiper('.card-wrapper', {
-  loop: true,
-  spaceBetween: 30,
-  // Pagination bullets
-  pagination: {
-    el: '.swiper-pagination',
-  },
+function carousel(direction) {
+  const devs = ['adrielly', 'ewerton','gabriel', 'tyler', 'ian']
+  const currentDevs = []
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-//responsive breakpoints
+  for (let dev of devs) {
+    const devElement = document.getElementById(dev)
 
-  breeakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-     768: {
-      slidesPerView: 2,
-    },
-     1024: {
-      slidesPerView: 3,
-    },
+    if (devElement.style.display === 'block') {
+      currentDevs.push(devs.indexOf(dev))
+    }
   }
-});
+
+  let nextDevs = []
+
+  if (direction === 'prev' && !currentDevs.includes(0)) {
+    for (let i = 0; i < currentDevs.length; i++) {
+      nextDevs.push(currentDevs[i] - 1)
+    }
+  } else if (direction === 'next' && !currentDevs.includes(devs.length - 1)) {
+    for (let i = 0; i < currentDevs.length; i++) {
+      nextDevs.push(currentDevs[i] + 1)
+    }
+  } else {
+    return
+  }
+
+  for (let dev of devs) {
+    const devElement = document.getElementById(dev)
+    
+    if (nextDevs.includes(devs.indexOf(dev))) {
+      devElement.style.display = 'block'
+    } else {
+      devElement.style.display = 'none'
+    }
+  }
+}
