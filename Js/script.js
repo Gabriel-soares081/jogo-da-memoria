@@ -2,6 +2,9 @@ function carousel(direction) {
   const devs = ['adrielly', 'ewerton','gabriel', 'tyler', 'ian']
   const currentDevs = []
 
+ 
+
+  
   for (let dev of devs) {
     const devElement = document.getElementById(dev)
 
@@ -12,11 +15,11 @@ function carousel(direction) {
 
   let nextDevs = []
 
-  if (direction === 'prev' && !currentDevs.includes(0)) {
+  if (direction === 'next' && !currentDevs.includes(0)) {
     for (let i = 0; i < currentDevs.length; i++) {
       nextDevs.push(currentDevs[i] - 1)
     }
-  } else if (direction === 'next' && !currentDevs.includes(devs.length - 1)) {
+  } else if (direction === 'prev' && !currentDevs.includes(devs.length - 1)) {
     for (let i = 0; i < currentDevs.length; i++) {
       nextDevs.push(currentDevs[i] + 1)
     }
