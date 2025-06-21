@@ -159,6 +159,20 @@ body {
    position: relative;
     right: 912px;
     transform: rotate(180deg); 
-  
-   
+}
+
+.header-container {
+    width: 100%;
+}
+
+.pc {
+    display: flex;
+    gap: 5px;
+    justify-content
+}
+
+.pcImg {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
 }
