@@ -168,7 +168,7 @@ body {
 .pc {
     display: flex;
     gap: 5px;
-    justify-content
+   justify-content: center;
 }
 
 .pcImg {

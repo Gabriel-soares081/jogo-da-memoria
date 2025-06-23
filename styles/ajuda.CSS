@@ -3,12 +3,13 @@
 }
 
 body {
-  background: linear-gradient(135deg, rgb(221, 174, 231), rgb(255, 255, 255));
-  background-color: white;
+  background: linear-gradient(150deg, rgb(0, 0, 0) 10%, rgb(255, 0, 136));
+  
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center; 
   background-size: cover;
   background-attachment: fixed;
+ aspect-ratio: 1/1;
 }
 
 .button:hover {
@@ -19,7 +20,65 @@ body {
   font-size: 24px;
 }
 
-.desc {
-  font-size: 24px;
+.desc { 
+  display: flex;
+  position: relative;
+  left: 95px; 
+}
+
+.desc1 {
+  display: flex;
+  position: relative;
+  left: 320px;
+}
+.regras {
+  position: relative;
+  left: 150px;
+  font-size: 20px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 350px;
+  border: 5px solid rgb(255, 255, 255);
+  height: 100px;
+  width: 800px;
+  
+   
+}
+
+.container {
+  display: flex;
+  position: relative;
+  left: 350px;
+  width: 800px;
+  height: 500px;
+  border: 5px solid rgb(255, 255, 255);
+  background: linear-gradient(150deg, rgb(0, 0, 0) 10%, rgb(255, 0, 76));
+  aspect-ratio: 1/1;
+  box-sizing: content-box ;
+}
+
+.titulo {
+  display: flex;  
+  position: relative;
+  left: 55%;
+  font-size: 30px;
+  
+}
+
+.text {
   text-align: left;
+}
+
+.sair {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 0px;
+  top: -100px;
+  text-align: center;
+color: #000;
 }
