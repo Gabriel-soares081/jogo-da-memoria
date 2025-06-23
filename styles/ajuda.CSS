@@ -2,23 +2,22 @@
     text-align: center;
 }
 
+
+
 body {
-  background: linear-gradient(150deg, rgb(0, 0, 0) 10%, rgb(255, 0, 136));
-  
+
+  background-image: url('../public/images/background-foda.jpg');  
   background-repeat: no-repeat;
   background-position: center center; 
   background-size: cover;
   background-attachment: fixed;
- aspect-ratio: 1/1;
+ 
 }
 
 .button:hover {
   color:rgb(0, 0, 0)
 }
 
-.cj {
-  font-size: 24px;
-}
 
 .desc { 
   display: flex;
@@ -36,17 +35,18 @@ body {
   left: 150px;
   font-size: 20px;
 }
+
 .header {
-  display: flex;
+  display: absolute;
   align-items: center;
-  justify-content: center;
+  justify-content: center ;  
   position: relative;
   left: 350px;
   border: 5px solid rgb(255, 255, 255);
-  height: 100px;
+  height: 10vh;
   width: 800px;
-  
-   
+
+
 }
 
 .container {
@@ -54,12 +54,12 @@ body {
   position: relative;
   left: 350px;
   width: 800px;
-  height: 500px;
+  height: 60vh;
   border: 5px solid rgb(255, 255, 255);
-  background: linear-gradient(150deg, rgb(0, 0, 0) 10%, rgb(255, 0, 76));
   aspect-ratio: 1/1;
   box-sizing: content-box ;
 }
+
 
 .titulo {
   display: flex;  
@@ -75,10 +75,35 @@ body {
 
 .sair {
   display: flex;
+  
   justify-content: center;
   position: relative;
   left: 0px;
   top: -100px;
   text-align: center;
-color: #000;
+}
+
+.sair:hover {
+  color: rgb(255, 0, 0);
+  
+}
+
+.sair {
+  background-color: yellow;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);  border-radius: 40%;
+  width: 150px;
+  height: 40px;
+  color: #4800ff;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 670px;
+  font-size: 17px;
+}
+
+.header-content {
+  display: flex;
+  position: relative;
+  height: 100%;
+  align-items: center; 
 }

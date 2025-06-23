@@ -1,62 +1,198 @@
-body {
-    background: linear-gradient(135deg, red, yellow);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
-.back {
-    
-    color:red
-    
-}
-
-.h1 {
-    text-align: center;
-    color: white;
-}
-
-.button {
-    text-align: center;
-    color:red;
-    border-radius: 8px;
-    padding: 8px;
-    cursor: pointer;
-}
-
-
-.btt {
-    align-items: center;
-}
-
-#informacoesdeCriadores {
-    list-style-type: none;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Inter", sans-serif;
 }
 
-.container {
+.header {
+    display: flex;
+    position: relative;
+    align-items: top;
+    justify-content: top;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../public/images/background-foda.jpg');
+}
+
+
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.card-list {
+    transition: 0.2s ease;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+.card-list .card-item .card-link {
+   width: 300px;
+    display: block;
+    background-color: rgb(120, 14, 58);
+    padding: 20px; 
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+
+.card-item:hover {
+    color: transparent;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #5372F0;
+   
+}
+
+.card-list .card-link .card-image {
+    width: 260px;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 10px;   
+}
+
+.card-list .card-link .badge {
+    color: #5372F0;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;    
+    margin:  16px 0 18px;
+    background: #DDE4FF;
+    width: fit-content;
+    border-radius: 50px;    
+}
+
+.card-list .card-link .badge.adrielly {
+    color: #B22485;
+    background: #F7DFF5;
+}
+
+.card-list .card-link .badge.ewerton {
+    color: #B25A2B;
+    background: #FFE3D2;
+}
+
+.card-list .card-link .badge.gabriel {
+    color: #205C20;
+    background: #D6F8D6;
+}
+
+.card-list .card-link .badge.tyler {
+    color: #856404;
+    background: #F7DFF5;
+}
+
+.card-list .card-link .badge.ian {
+    color: #b28c19;
+    background: #fff3cd;
+}
+
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #5372F0;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #5372F0;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background:  #5372F0;
+}
+
+.card-button material-symbols-rounded {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, red, yellow);
-    padding: 24px;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.4s ease;
+    
+
 }
 
-.container-slider {
+.card-button :target {
+    display: block;
+
+}
+
+.swiper-button-prev {
+    position: relative;
+    left: 60px;
+    transform: rotate(180deg);
+
+}
+
+.swiper-button-next {
+   position: relative;
+    right: 912px;
+    transform: rotate(180deg); 
+}
+
+.header-container {
+    width: 100%;
+}
+
+.pc {
     display: flex;
-   width: 100%;
-   min-height: 100vh;
-   align-items: center;
+    gap: 5px;
+    align-items: center;
    justify-content: center;
-
 }
 
+.pcImg {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.sair {
+  background-color: yellow;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);  border-radius: 40%;
+  width: 150px;
+  height: 40px;
+  color: #4800ff;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -500px;
+  font-size: 17px;
+}
