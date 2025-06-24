@@ -20,7 +20,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url('../public/images/background-foda.jpg');
+    background-image: url('../public/images/fundo-final.png');
 }
 
 
@@ -206,15 +206,15 @@ body {
     height: 50px;
   position: relative;
     left: 0px;
-    top: -550px;
+    top: -530px;
     
 }
 
 .sair {
-    max-width: 170px;
-    max-height: 120px;
-    width: auto;
-    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+    width: 100px;
+    height: 150px;
 
 }
 

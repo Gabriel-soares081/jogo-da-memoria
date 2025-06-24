@@ -6,7 +6,7 @@
 
 body {
 
-  background-image: url('../public/images/background-foda.jpg');  
+  background-image: url('../public/images/fundo-final.png');  
   background-repeat: no-repeat;
   background-position: center center; 
   background-size: cover;
@@ -89,16 +89,25 @@ body {
 }
 
 .sair {
-  background-color: yellow;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);  border-radius: 40%;
-  width: 150px;
-  height: 40px;
-  color: #4800ff;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  align-items: top;
+  justify-content: top;
+}
+
+.sair {
+    text-align: center;
   position: relative;
-  left: 670px;
-  font-size: 17px;
+  top: -560px;
+  left: -5px;
+  cursor: pointer;
+}
+
+.sair {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100px;
+    height: 150px;
+
 }
 
 .header-content {
