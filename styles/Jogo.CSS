@@ -1,0 +1,23 @@
+body {
+    background-image: url('../public/images/fundo-final.png');  
+}
+
+.sair {
+    display: flex;
+    max-width: 200px;
+    max-height: 150px;
+    position: relative;
+    bottom: 290px;
+    left: -20px;
+    cursor: pointer;
+}
+
+.border {
+    border: 5px solid white;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    left: 510px;
+    width: 500px;
+    height: 200px;
+}
