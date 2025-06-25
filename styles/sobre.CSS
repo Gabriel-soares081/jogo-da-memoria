@@ -10,9 +10,10 @@
 
 .header {
     display: flex;
-    position: relative;
     align-items: top;
     justify-content: top;
+    position: relative;
+    left: 180px;
 }
 
 body {
@@ -21,6 +22,16 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-image: url('../public/images/fundo-final.png');
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    left: 250px;
 }
 
 
@@ -53,7 +64,7 @@ body {
        width: 300px;
        position: relative;
        left: 17px;
-       top: 70px;
+       top: -10px;
        display: block;
     background-color: rgb(120, 14, 58);
     padding: 20px; 
@@ -161,16 +172,16 @@ body {
 
 .swiper-button-prev {
     position: relative;
-    left: 80px;
-    bottom: -70px;
+    left: 75px;
+    bottom: -0px;
     transform: rotate(180deg);
 
 }
 
 .swiper-button-next {
    position: relative;
-    right: 876px;
-    top: 50px;
+    right: 896px;
+    top: -0px;
     transform: rotate(180deg); 
 }
 
@@ -186,9 +197,18 @@ body {
 }
 
 .pcImg {
+   
     width: 50px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+}
+
+.pcImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 180px;
 }
 
 .sair {
@@ -206,7 +226,8 @@ body {
     height: 50px;
   position: relative;
     left: 0px;
-    top: -530px;
+    top: -565px;
+    cursor: pointer;
     
 }
 
@@ -222,4 +243,61 @@ body {
 
 .sair:hover {
     color: red;
+}
+
+.final {
+    font-size: 20px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    min-width: 450px;
+    min-height: 50px;
+    width: 300px;
+    height: 50px;
+    top: 250px;
+    left: -600px;
+    color: rgb(165, 12, 12);
+
+}
+
+#trans:hover {
+    color: blue;
+    font-size: 70px;
+    transition: 0.2s ease ;
+}
+
+#trans:hover {
+    font-size: 33px;
+    transition: 0.2s ease;
+}
+
+#adrielly:hover {
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    transition: 0.2s ease ;
+}
+
+#ewerton:hover {
+    color: blue;
+    font-size: 70px;
+    transition: 0.2s ease ;
+}
+
+#gabriel:hover {
+    color: blue;
+    font-size: 70px;
+    transition: 0.2s ease ;
+}
+
+#tyler:hover {
+    color: blue;
+    font-size: 70px;
+    transition: 0.2s ease ;
+}
+
+#ian:hover {
+    color: blue;
+    font-size: 70px;
+    transition: 0.2s ease ;
 }

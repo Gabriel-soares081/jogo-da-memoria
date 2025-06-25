@@ -14,9 +14,7 @@ body {
  
 }
 
-.button:hover {
-  color:rgb(0, 0, 0)
-}
+
 
 
 .desc { 
@@ -28,12 +26,18 @@ body {
 .desc1 {
   display: flex;
   position: relative;
+  max-width: 200px;
   left: 320px;
 }
 .regras {
+ 
+  max-width: 574.8;
+  max-height: 574.8;
   position: relative;
   left: 150px;
   font-size: 20px;
+  height: 100px;
+  width: 550;
 }
 
 .header {
@@ -50,7 +54,7 @@ body {
 }
 
 .container {
-  display: flex;
+  
   position: relative;
   left: 350px;
   width: 800px;
@@ -62,9 +66,11 @@ body {
 
 
 .titulo {
-  display: flex;  
+ display: flex;
   position: relative;
-  left: 55%;
+  max-width: 170px;
+  max-height: 50px;
+  left: 40%;
   font-size: 30px;
   
 }
@@ -83,10 +89,7 @@ body {
   text-align: center;
 }
 
-.sair:hover {
-  color: rgb(255, 0, 0);
-  
-}
+
 
 .sair {
   display: flex;
@@ -115,4 +118,15 @@ body {
   position: relative;
   height: 100%;
   align-items: center; 
+}
+
+#l1:hover {
+  font-size: 25px;
+  
+}
+
+.trans-content {
+  min-width: 809.6;
+  width: 809.6;
+  
 }
