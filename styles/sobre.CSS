@@ -301,3 +301,8 @@ body {
     font-size: 70px;
     transition: 0.2s ease ;
 }
+
+.card-item:hover {
+    background-color: transparent;
+    transition: 0.2s ease;
+}
