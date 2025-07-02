@@ -11,7 +11,7 @@ body {
   background-position: center center; 
   background-size: cover;
   background-attachment: fixed;
- 
+  margin: 0;
 }
 
 
@@ -41,16 +41,35 @@ body {
 }
 
 .header {
-  display: absolute;
-  align-items: center;
-  justify-content: center ;  
-  position: relative;
-  left: 350px;
-  border: 5px solid rgb(255, 255, 255);
   height: 10vh;
-  width: 800px;
+  width: 100%;
+  margin-bottom: 20px;
+}
 
+.header div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
+.header div h1 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 800px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.sair {
+  position: absolute;
+  max-width: 200px;
+  max-height: 200px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  left: 0;
+  top: 0;
 }
 
 .container {
@@ -77,40 +96,6 @@ body {
 
 .text {
   text-align: left;
-}
-
-.sair {
-  display: flex;
-  
-  justify-content: center;
-  position: relative;
-  left: 0px;
-  top: -100px;
-  text-align: center;
-}
-
-
-
-.sair {
-  display: flex;
-  align-items: top;
-  justify-content: top;
-}
-
-.sair {
-    text-align: center;
-  position: relative;
-  top: -560px;
-  left: -5px;
-  cursor: pointer;
-}
-
-.sair {
-    max-width: 200px;
-    max-height: 200px;
-    width: 100px;
-    height: 150px;
-
 }
 
 .header-content {

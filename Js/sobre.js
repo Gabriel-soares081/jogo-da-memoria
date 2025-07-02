@@ -34,3 +34,18 @@ function carousel(direction) {
     }
   }
 }
+
+function sumir(name){
+  const element = document.getElementById(name)
+
+  const a = element.firstChild
+
+  if (a.children[0].style.display != 'none') {
+    a.children[0].style.display = 'none'
+    a.children[1].style.display = 'block'
+  } else {
+    a.children[0].style.display = 'block'
+    a.children[1].style.display = 'none'
+  }
+ 
+}

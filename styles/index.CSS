@@ -13,7 +13,7 @@ body {
     display: flex;
     max-width: max-content;
     max-height: max-content;
-    height: 420px;
+    height: 100%;
     width: auto;
 }
 
