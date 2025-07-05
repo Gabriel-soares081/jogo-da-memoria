@@ -56,16 +56,17 @@ body {
     transition: 0.2s ease;
 }
 
+
 .card-list {
     list-style: none;
 }
 .card-list .card-item .card-link {
- 
-       width: 300px;
-       position: relative;
-       left: 17px;
-       top: -10px;
-       display: block;
+    
+    width: 300px;
+    position: relative;
+    left: 17px;
+    top: -10px;
+    display: block;
     background-color: rgb(120, 14, 58);
     padding: 20px; 
     border-radius: 12px;
@@ -81,7 +82,7 @@ body {
 
 .card-list .card-item .card-link:hover {
     border-color: #5372F0;
-   
+    
 }
 
 .card-list .card-link .card-image {
@@ -142,6 +143,7 @@ body {
     margin: 30px 0 5px;
     background: none;
     cursor: pointer;
+    
     border: 2px solid #5372F0;
     transform: rotate(-45deg);
     transition: 0.4s ease;
@@ -300,3 +302,4 @@ body {
     font-size: 70px;
     transition: 0.2s ease ;
 }
+
