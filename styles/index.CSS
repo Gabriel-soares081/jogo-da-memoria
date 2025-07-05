@@ -6,12 +6,19 @@ body {
   background-size: cover;
   background-attachment: fixed; 
 }
+.tittle {
+    font-size: 60px;
+    position: relative;
+    
+
+}
 
 .container {
 <<<<<<< HEAD:styles/menu.CSS
 
 =======
     display: flex;
+    position: relative;
     max-width: max-content;
     max-height: max-content;
     height: 100%;
@@ -19,18 +26,18 @@ body {
 >>>>>>> origin/main:styles/index.CSS
 }
 
-.tittle {
-    font-size: 60px;
-    position: relative;
-    bottom: 60px;
-
-}
 
 
 .menu {
     display: flex;
     align-content: center;
     justify-content: center;
+<<<<<<< Updated upstream
+=======
+    position: absolute;
+    
+   
+>>>>>>> Stashed changes
 }
 
 #JOGO {
