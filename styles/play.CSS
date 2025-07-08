@@ -1,0 +1,96 @@
+body {
+    background-image: url('../public/images/fundo-final.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+
+}
+
+.header {
+    display: absolute;
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.sair {
+  position: absolute;
+  max-width: 200px;
+  max-height: 200px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+}
+
+.border {
+    display: absolute;
+    color: yellow;
+    border: 5px solid white;
+    width: 50vh;
+    height: 50vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    top: 5vh
+    
+}
+
+.dif {
+    text-align: center;
+}
+
+.text {
+    
+    text-align: center;
+    align-items: center;
+    color: yellow;
+    justify-self: center;
+    max-width: 300px;
+}
+
+.ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    left: 15vh;
+}
+
+.fa{
+  
+    background-color: green;
+    border-radius: 30vh;
+    max-width: 20vh;
+    align-items: center;
+    justify-content: center;
+    
+
+
+}
+
+.me {
+    background-color: orange;
+    border-radius: 30vh;
+    max-width: 20vh;
+    align-items: center;
+}
+
+.di {
+    background-color: red;
+    border-radius: 30vh;
+    max-width: 20vh;
+    align-items: center;
+}
+
