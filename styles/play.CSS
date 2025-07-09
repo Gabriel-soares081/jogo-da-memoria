@@ -75,9 +75,11 @@ body {
     max-width: 20vh;
     align-items: center;
     justify-content: center;
-    
+}
 
-
+.fa:hover {
+   
+    transition: 0.2s ease;
 }
 
 .me {
