@@ -1,6 +1,6 @@
 function carousel(direction) {
   const devs = ['adrielly', 'ewerton','gabriel', 'tyler', 'ian']
-  const currentDevs = []
+  
 
   for (let dev of devs) {
     const devElement = document.getElementById(dev)

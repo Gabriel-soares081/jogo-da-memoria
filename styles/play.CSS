@@ -60,12 +60,16 @@ body {
 
 .ul {
     display: flex;
+    width: 22vh;
     text-align: center;
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
     position: relative;
-    left: 15vh;
+    top : 3vh;
+    left: 12vh;
+    background-color: transparent;
+    margin: 2vh;
 }
 
 .fa{

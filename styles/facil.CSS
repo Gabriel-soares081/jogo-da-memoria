@@ -1,0 +1,60 @@
+body {
+  background-image: url('../public/images/background-foda.jpg');  
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.header {
+    display: block;
+    max-height: 180px;
+
+}
+
+.sair {
+    max-height: 30vh;
+    max-width: 20vh;
+}
+
+.contador {
+    display: absolute;
+    text-align: right;
+    justify-content: right;
+    position: relative;
+    bottom: 30vh;
+    right: 10vh;
+    color: white;
+}
+
+.container {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.peca {
+    display: absolute;
+    align-items: center;
+    justify-content: center;
+    max-width: 20vh;
+    max-height: 20vh;
+    flex-direction: row;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.border {
+    height: 70vh;
+    max-width: 65vh;
+    
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 65vh;
+    bottom: 15vh
+   
+}
+
