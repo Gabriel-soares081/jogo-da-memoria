@@ -12,15 +12,25 @@ function dificuldade(escolherDificuldade) {
         abrirPagina.style.display = "flex"
 }
 
-function mudarImagem() {
-  const imagem = document.getElementById("minhaImagem");
-  if (imagem.src.includes("../public/images/fundo de Ina.png")) {
-  if (imagem.src.includes("../public/images/renato.png")) {
-    imagem.src = "../public/images/renato.png";
-  } else {
-    imagem.src = "../public/images/fundo de Ina.png";
-  }}
-}
+function mudarImagem(id) {
+  const dados = {
+    maca:"../public/images/GOAT.jpg",
+    uva:"",
+    morango:"",
+    cereja:"",
+    limao:"",
+    abacaxi:"",
+    melancia:"",
+    banana:"",    
+  }
 
+  const imagem = document.getElementById(id);
+
+  if (imagem.getAttribute("src") === "../public/images/fundo de Ina.png") {
+    imagem.setAttribute("src", dados[id])
+  } else {
+    imagem.setAttribute("src", "../public/images/fundo de Ina.png")    
+  }
+}
 
 
