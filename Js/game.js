@@ -15,8 +15,8 @@ function dificuldade(escolherDificuldade) {
 function mudarImagem(id) {
   const dados = {
     maca:"../public/images/GOAT.jpg",
-    uva:"",
-    morango:"",
+    uva:"../public/images/fundo-final.png",
+    morango:"../public/images/cereja.png",
     cereja:"",
     limao:"",
     abacaxi:"",
@@ -32,5 +32,9 @@ function mudarImagem(id) {
     imagem.setAttribute("src", "../public/images/fundo de Ina.png")    
   }
 }
-
-
+document.querySelectorAll('.peca').forEach(img => {
+    img.addEventListener('click', function() {
+        this.classList.add('animar');
+        setTimeout(() => this.classList.remove('animar'), 500); // duração da animação
+    });
+});
