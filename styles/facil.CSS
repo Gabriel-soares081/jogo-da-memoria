@@ -5,6 +5,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
+
 }
 
 .header {
@@ -37,21 +38,23 @@ body {
 }
 
 .peca {
-    display: absolute;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     max-width: 20vh;
     max-height: 20vh;
     flex-direction: row;
-    padding: 5px;
+    padding: 0  px;
     cursor: pointer;
-
+    transform-origin: center;
 }
 
 .border {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
     height: 70vh;
     max-width: 65vh;
-    
     align-items: center;
     justify-content: center;
     position: relative;
@@ -60,3 +63,20 @@ body {
    
 }
 
+
+.peca.animar {
+    animation: girar 0.5s;
+}
+
+@keyframes girar {
+    0% { transform:  
+        rotateY(0deg); 
+    }
+    50% { transform: 
+        rotateY(180deg);
+    }
+    100% { transform:  
+        rotateY(360deg); 
+    }
+    
+}
