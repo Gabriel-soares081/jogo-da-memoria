@@ -12,26 +12,7 @@ function dificuldade(escolherDificuldade) {
         abrirPagina.style.display = "flex"
 }
 
-function mudarImagem(id) {
-  const dados = {
-    maca:"../public/images/GOAT.jpg",
-    uva:"../public/images/uva.png",
-    morango:"../public/images/cereja.png",
-    cereja:"",
-    limao:"",
-    abacaxi:"",
-    melancia:"../public/images/melancia.png",
-    banana:"",    
-  }
 
-  const imagem = document.getElementById(id);
-
-  if (imagem.getAttribute("src") === "../public/images/fundo de Ina.png") {
-    imagem.setAttribute("src", dados[id])
-  } else {
-    imagem.setAttribute("src", "../public/images/fundo de Ina.png")    
-  }
-}
 document.querySelectorAll('.peca').forEach(img => {
     img.addEventListener('click', function() {
         this.classList.add('animar');
@@ -44,13 +25,13 @@ function gerarHash(str) {
     if (str.length === 0) return hash;
     for (i = 0; i < str.length; i++) {
         codigo   = str.charCodeAt(i);
-        hash  = ((hash << 5) - hash) + codigo;
+        hash  = ((hash < 5) - hash) + codigo;
         hash |= 0;
     }
     return 'peca_' + Math.abs(hash);
 }
 
-// Mapeia hash para nome real
+
 const hashMap = {};
 document.querySelectorAll('.peca').forEach(img => {
     const nome = img.getAttribute('data-peca');
