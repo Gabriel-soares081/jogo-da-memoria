@@ -36,7 +36,7 @@ const hashMap = {};
 document.querySelectorAll('.peca').forEach(img => {
     const nome = img.getAttribute('data-peca');
     const hash = gerarHash(nome);
-    img.id = hash;
+    img.setAttribute('data-hash', hash); 
     hashMap[hash] = nome;
     img.addEventListener('click', function() {
         this.classList.add('animar');
@@ -47,17 +47,25 @@ document.querySelectorAll('.peca').forEach(img => {
 
 function mudarImagem(hash) {
     const dados = {
-        maca:"../public/images/GOAT.jpg",
-        uva:"../public/images/uva.png",
-        morango:"../public/images/cereja.png",
-        cereja:"",
-        limao:"",
-        abacaxi:"",
-        melancia:"../public/images/melancia.png",
-        banana:"",    
+        a:"../public/images/maça.png",
+        b:"../public/images/uva.png",
+        c:"../public/images/morango.png",
+        d:"../public/images/cereja.png",
+        e:"../public/images/Limão.png",
+        f:"../public/images/abacaxi.png",
+        g:"../public/images/melancia.png",
+        h:"../public/images/banana.png",
+        i:"../public/images/maça.png",
+        j:"../public/images/uva.png",
+        k:"../public/images/morango.png",
+        l:"../public/images/cereja.png",
+        m:"../public/images/Limão.png",
+        n:"../public/images/abacaxi.png",
+        o:"../public/images/melancia.png",
+        p:"../public/images/banana.png",     
     };
-    const nome = hashMap[hash];
-    const imagem = document.getElementById(hash);
+    const nome = hashMap[hash]; 
+    const imagem = document.querySelector(`[data-hash="${hash}"]`);
     if (imagem.getAttribute("src") === "../public/images/fundo de Ina.png") {
         imagem.setAttribute("src", dados[nome]);
     } else {
