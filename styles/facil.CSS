@@ -17,6 +17,9 @@ body {
 .sair {
     max-height: 30vh;
     max-width: 20vh;
+    cursor: pointer;
+    width: 18vh;
+    height: 20vh;
 }
 
 .contador {
@@ -24,8 +27,8 @@ body {
     text-align: right;
     justify-content: right;
     position: relative;
-    bottom: 30vh;
-    right: 10vh;
+    bottom: 23vh;
+    right: 15vh;
     color: white;
 }
 
@@ -79,4 +82,14 @@ body {
         rotateY(360deg); 
     }
     
+}
+
+.virando {
+    animation: flip 0.6s;
+}
+
+@keyframes flip {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(90deg); }
+    100% { transform: rotateY(0deg); }
 }

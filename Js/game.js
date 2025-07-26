@@ -64,7 +64,7 @@ function virarPeca(img) {
         bloqueado = true;
         const [peca1, peca2] = pecasViradas;
         if (peca1.tipo === peca2.tipo) {
-            // Iguais: mantêm viradas e escurece
+            // mantêm viradas e escurece
             peca1.img.style.filter = "brightness(0.7)";
             peca2.img.style.filter = "brightness(0.7)";
             pecasViradas.length = 0;
@@ -73,7 +73,7 @@ function virarPeca(img) {
             pontos += 100;
             contador.textContent = pontos;
         } else {
-            // Diferentes: desvira depois de 1s
+            // desvira depois de 1s
             setTimeout(() => {
                 mudarImagem(peca1.img);
                 mudarImagem(peca2.img);
@@ -129,6 +129,29 @@ todasPecas.forEach((tipo, idx) => {
     img.setAttribute('src', '../public/images/fundo de Ina.png');
     tabuleiro.appendChild(img);
 });
+
+// Virar todas as peças ao carregar com animação
+const todasImgs = document.querySelectorAll('.peca');
+todasImgs.forEach(img => {
+    img.classList.add('virando');
+    setTimeout(() => {
+        img.classList.remove('virando');
+        mudarImagem(img); // mostra a frente
+        img.classList.add('virada');
+    }, 600); // tempo igual ao da animação
+});
+
+// Depois de 2 segundos, desvira todas com animação
+setTimeout(() => {
+    todasImgs.forEach(img => {
+        img.classList.add('virando');
+        setTimeout(() => {
+            img.classList.remove('virando');
+            mudarImagem(img); // volta para o fundo
+            img.classList.remove('virada');
+        }, 600);
+    });
+}, 2000);
 
 // Agora adicione os eventos de clique nas peças criadas
 const pecasViradas = [];
