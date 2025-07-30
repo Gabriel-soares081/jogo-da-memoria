@@ -1,3 +1,86 @@
+const cards = [
+    {
+        id: window.crypto.randomUUID(),
+        code: 'a',
+        image: "../public/images/maça.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'a',
+        image: "../public/images/maça.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'b',
+        image:"../public/images/uva.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'b',
+        image:"../public/images/uva.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'c',
+        image:"../public/images/morango.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'c',
+        image:"../public/images/morango.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'd',
+        image:"../public/images/cereja.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'd',
+        image:"../public/images/cereja.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'e',
+        image:"../public/images/Limão.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'e',
+        image:"../public/images/Limão.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'f',
+        image:"../public/images/abacaxi.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'f',
+        image:"../public/images/abacaxi.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'g',
+        image:"../public/images/melancia.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'g',
+        image:"../public/images/melancia.png",
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'h',
+        image:"../public/images/banana.png"
+    },
+    {
+        id: window.crypto.randomUUID(),
+        code: 'h',
+        image:"../public/images/banana.png"
+    }
+]
+
 //mostrar pagina de dificuldade
 
 function dificuldade(escolherDificuldade) {
@@ -86,20 +169,14 @@ function virarPeca(img) {
     }
 }
 
+
 function mudarImagem(img) {
     const tipo = img.getAttribute('data-peca');
-    const dados = {
-        a:"../public/images/maça.png",
-        b:"../public/images/uva.png",
-        c:"../public/images/morango.png",
-        d:"../public/images/cereja.png",
-        e:"../public/images/Limão.png",
-        f:"../public/images/abacaxi.png",
-        g:"../public/images/melancia.png",
-        h:"../public/images/banana.png"
-    };
+    
     if (img.getAttribute("src") === "../public/images/fundo de Ina.png") {
-        img.setAttribute("src", dados[tipo]);
+        const card = cards.find(card  => card.id === tipo)
+
+        img.setAttribute("src", card.image)
     } else {
         img.setAttribute("src", "../public/images/fundo de Ina.png");
     }
@@ -115,8 +192,8 @@ function embaralhar(peca) {
 }
 
 // Tipos de peças (pares)
-const tipos = ['a','b','c','d','e','f','g','h'];
-const todasPecas = embaralhar([...tipos, ...tipos]);
+const tipos = cards.map(card => card.id)
+const todasPecas = embaralhar(tipos);
 
 
 const tabuleiro = document.getElementById('tabuleiro');
