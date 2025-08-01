@@ -146,7 +146,7 @@ function virarPeca(img) {
     if (pecasViradas.length === 2) {
         bloqueado = true;
         const [peca1, peca2] = pecasViradas;
-        if (peca1.tipo === peca2.tipo) {
+        if (peca1.code === peca2.code) {
             // mantêm viradas e escurece
             peca1.img.style.filter = "brightness(0.7)";
             peca2.img.style.filter = "brightness(0.7)";
