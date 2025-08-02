@@ -3,6 +3,7 @@ function carousel(direction) {
   
 
   for (let dev of devs) {
+    let currentDevs = []
     const devElement = document.getElementById(dev)
 
     if (devElement.style.display === 'block') {
