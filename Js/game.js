@@ -191,8 +191,22 @@ function embaralhar(peca) {
     return peca;
 }
 
+// Defina os parâmetros de cada dificuldade
+const dificuldades = {
+    facil:   { pares: 4, tempo: 60, pontosPorPar: 100 },
+    medio:   { pares: 6, tempo: 45, pontosPorPar: 150 },
+    dificil: { pares: 8, tempo: 30, pontosPorPar: 200 }
+};
+
+// Corrija a leitura do parâmetro da URL
+const dificuldadeSelecionada = new URLSearchParams(window.location.search).get('dificuldade') || 'facil';
+const parametros = dificuldades[dificuldadeSelecionada];
+
+// Use os parâmetros para definir o jogo
+const cardsSelecionados = cards.slice(0, parametros.pares * 2); // cada par tem 2 cards
+
 // Tipos de peças (pares)
-const tipos = cards.map(card => card.id)
+const tipos = cardsSelecionados.map(card => card.id);
 const todasPecas = embaralhar(tipos);
 
 
@@ -243,3 +257,5 @@ document.querySelectorAll('.peca').forEach(img => {
     });
 });
 
+
+    
