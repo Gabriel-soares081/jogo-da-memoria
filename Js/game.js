@@ -169,7 +169,6 @@ function virarPeca(img) {
     }
 }
 
-
 function mudarImagem(img) {
     const tipo = img.getAttribute('data-peca');
     
