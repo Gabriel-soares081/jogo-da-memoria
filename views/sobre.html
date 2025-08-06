@@ -11,79 +11,70 @@
     </head>
     <body>
         <div class="header-container">
-</div>
-<img class="sair" src="../public/images/retornar.png" alt="Sair" onclick="window.location.href='../index.html'">
-</div>
-        <div class="pc">
-            <img class="pcImg" src="../public/images/ponto-cidadao.jpg" alt="Ponto Cidadão Logo">
-            <h1 style="color: blue;" class="header">Ponto cidadão</h1>
+            <img class="sair" src="../public/images/retornar.png" alt="Sair" onclick="window.location.href='../index.html'">
+            <div class="pc">
+                <img class="pcImg" src="../public/images/ponto-cidadao.jpg" alt="Ponto Cidadão Logo">
+                <h1 style="color: blue;" class="pc2">Ponto cidadão</h1>
+            </div>
         </div>
         
-        <div class="container">
+    <div class="container">
         <div class="card-wrapper">
             <ul class="card-list">
-                <li  class="card-item" id="adrielly" style="display: block;" onclick="sumir('adrielly')">
+                <div class="swiper-button-next" onclick="carousel('prev')"></div>
+                
+                <li class="card-item" id="ian" style="display: block;">
                     
-                    
-                    <a  href="#" class="card-link">
-                        <div>
-                            <img src="../public/images/Adrielly.jpg" alt="marketer" class="card-image">
-                            <p class="badge adrielly">Desenvolvedora</p>
-                                <h2 class="card-title"> O essencial é invisível.𓆞</h2>
-                            </div>
+                            <a href="#" class="card-link">
+                                <img src="../public/images/Yan.jpg" alt="marketer" class="card-image">
+                                <p class="cargo ian">Desenvolvedor e Designer</p>
+                                <h2 class="card-title">Ian, 19 anos</h2>
                             
-                            <p style="display: none; font-size: 10px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, maxime laborum. Blanditiis amet, autem nostrum aliquam optio deleniti odio vel, veritatis alias odit, perspiciatis vitae? Impedit tempora voluptate dolor ipsum.</p>
-                        </a>
-
-                    </li>
-                    <li class="card-item" id="ewerton" style="display: block;">
+                            </a>
+                        </li>
+                        <li class="card-item" id="ewerton" style="display: block;">
                    
 
-                           <a  href="#" class="card-link">
+                            <a href="#" class="card-link">
                                <img src="../public/images/Ewerton1.jpg" alt="marketer" class="card-image">
-                               <p class="badge ewerton">Desenvolvedor</p>
+                               <p class="cargo ewerton">Desenvolvedor</p>
                                <h2 class="card-title">Éwerton, 19 anos</h2>
                                
                             </a>
                         </li>
-                        <li  class="card-item" id="gabriel" style="display: block;">                    
+                        <li  class="card-item" id="gabriel" style="display: none;">                    
                             <a  href="#" class="card-link">
                                 <img src="../public/images/Gabriel.jpg" alt="marketer" class="card-image">
-                                <p class="badge gabriel">Desenvolvedor</p>
+                                <p class="cargo gabriel">Desenvolvedor</p>
                                 <h2 class="card-title"> Corrida hoje, vitoria amanhã </h2>
                                 
                             </a>
                         </li>
-                        <li  class="card-item" id="tyler" style="display: none;">
+                        <li  class="card-item" id="adrielly" style="display: none;">
                             <a  href="#" class="card-link">
-                                <img src="../public/images/Tyler.jpg" alt="marketer" class="card-image">
-                                <p class="badge tyler">Desenvolvedor</p>
-                                <h2 class="card-title"> Tyler Alves, 19 anos.</h2>
-                                
-                            </a>
-                        </li>
-                        <li  class="card-item" id="ian" style="display: none;">
-                    
-                        <a href="#" class="card-link">
-                            <img src="../public/images/Yan.jpg" alt="marketer" class="card-image">
-                            <p class="badge ian">Desenvolvedor e Designer</p>
-                            <h2 class="card-title">Ian, 19 anos
-                            </h2>
-                            
-                        </a>
-                    </li>
-                </ul>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev" onclick="carousel('prev')"></div>
-                <div class="swiper-button-next" onclick="carousel('next')"></div>
-            </div>
-    
-    <div class="final">
-        <h2>Curso de desenvolvimento Web</h2>
-    </div>
-    
-    <script src="../Js/sobre.js"></script>
+                                <div>
+                                    <img src="../public/images/Adrielly.jpg" alt="marketer" class="card-image">
+                                    <p class="cargo adrielly">Desenvolvedora</p>
+                                    <h2 class="card-title">Adrielly, 16 anos</h2>
 
+                                </div>
+                            </a>                        
+                        </li>
+                <div class="swiper-button-prev" onclick="carousel('next')"></div> 
+            </ul>
+
+                      
+        </div>
+    </div>
+
+            <div class="final">
+                <h2>Curso de desenvolvimento Web</h2>
+            </div>
+
+                    <div class="mentor">
+                        <h2>Mentor de progamção - Fábio Fraga</h2> 
+                    </div>
     
-</body>
+            <script src="../Js/sobre.js"></script>
+    </body>
 </html>
