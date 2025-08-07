@@ -1,4 +1,4 @@
-const cards = [
+var cards = [
     {
         id: window.crypto.randomUUID(),
         code: 'a',
@@ -95,9 +95,6 @@ function dificuldade(escolherDificuldade) {
         abrirPagina.style.display = "flex"
 }
 
-
-
-
 function gerarHash(str) {
     let hash = 0, i, codigo;
     if (str.length === 0) return hash;
@@ -139,9 +136,10 @@ let pontos = 0;
 
 function virarPeca(img) {
     const tipo = img.getAttribute('data-peca');
+    const card = cards.find(card => card.id === tipo);
     img.classList.add('virada');
     mudarImagem(img);
-    pecasViradas.push({ img, tipo });
+    pecasViradas.push({ img, tipo, code: card.code });
 
     if (pecasViradas.length === 2) {
         bloqueado = true;
@@ -167,7 +165,10 @@ function virarPeca(img) {
             }, 1000);
         }
     }
+console.log(pecasViradas);
+
 }
+
 
 function mudarImagem(img) {
     const tipo = img.getAttribute('data-peca');
