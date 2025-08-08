@@ -1,0 +1,36 @@
+body {
+    
+  background-image: url('../public/images/background-foda.jpg');  
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  background-attachment: fixed; 
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#colocados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 9vh;
+    bottom: 10vh;
+    gap: 10vh;
+}
+
+.sair {
+    display: flex;
+    width: 20vh;
+    height: 25vh;
+    position: relative;
+    right: 5vh;
+    bottom: 14vh;
+    cursor: pointer;
+}
+
