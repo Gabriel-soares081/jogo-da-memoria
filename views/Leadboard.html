@@ -31,5 +31,14 @@
             10°<br>
         </ul>
         </div>
+       
+<div class="temporizador" id="tempo-final"></div>
+
+<script style="color: yellow;"";">
+    const tempo = localStorage.getItem('tempoPartida');
+    if (tempo) {
+        document.getElementById('tempo-final').textContent = `Seu tempo: ${tempo} segundos`;
+    }
+</script>
 </body>
 </html>

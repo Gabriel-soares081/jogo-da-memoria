@@ -257,5 +257,65 @@ document.querySelectorAll('.peca').forEach(img => {
     });
 });
 
+let tempoInicio = null;
+let intervalo = null;
+let tempoFinal = null;
 
-    
+// Crie o elemento do temporizador
+const temporizador = document.createElement('div');
+temporizador.className = 'temporizador';
+temporizador.style.fontSize = '2rem';
+temporizador.style.margin = '10px';
+temporizador.textContent = 'Tempo: 0s';
+temporizador.style.color = 'yellow';
+temporizador.style.display = 'flex';
+temporizador.style.left = '30vh';
+document.body.prepend(temporizador);
+
+// Inicie o temporizador ao carregar o jogo
+function iniciarTemporizador() {
+    tempoInicio = Date.now();
+    intervalo = setInterval(() => {
+        const tempoAtual = Math.floor((Date.now() - tempoInicio) / 1000);
+        temporizador.textContent = `Tempo: ${tempoAtual}s`;
+    }, 1000);
+}
+iniciarTemporador();
+
+function verificarFimDeJogo() {
+    // Verifica se todas as peças estão viradas e escurecidas
+    const todasViradas = document.querySelectorAll('.peca.virada');
+    if (todasViradas.length === cardsSelecionados.length) {
+        clearInterval(intervalo);
+        tempoFinal = Math.floor((Date.now() - tempoInicio) / 1000);
+        // Salva o tempo no localStorage
+        localStorage.setItem('tempoPartida', tempoFinal);
+        // Redireciona para o Leadboard
+        window.location.href = './Leadboard.html';
+    }
+}
+
+// Altere o código onde acerta um par:
+if (pecasViradas.length === 2) {
+    bloqueado = true;
+    const [peca1, peca2] = pecasViradas;
+    if (peca1.code === peca2.code) {
+        peca1.img.style.filter = "brightness(0.7)";
+        peca2.img.style.filter = "brightness(0.7)";
+        pecasViradas.length = 0;
+        bloqueado = false;
+        verificarFimDeJogo(); // <-- Adicione aqui
+    } else {
+        setTimeout(() => {
+            mudarImagem(peca1.img);
+            mudarImagem(peca2.img);
+            peca1.img.classList.remove('virada');
+            peca2.img.classList.remove('virada');
+            pecasViradas.length = 0;
+            bloqueado = false;
+        }, 1000);
+    }
+}
+
+
+
