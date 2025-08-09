@@ -15,7 +15,7 @@
 <body>
     
     <div><h1 id="titulo" style="color: yellow;">Leadeboard</h1>
-           <img class="sair" src="../public/images/retornar.png" alt="Sair" onclick="window.location.href='../index.html'">
+           <img class="sair" src="../public/images/retornar.png" alt="Sair" onclick="window.location.href='./Leadboard.html'">
         </div>
         <div id="colocados">
         <ul id="colocados" style="color: yellow;">
@@ -32,12 +32,22 @@
         </ul>
         </div>
        
-<div class="temporizador" id="tempo-final"></div>
 
-<script style="color: yellow;"";">
-    const tempo = localStorage.getItem('tempoPartida');
-    if (tempo) {
-        document.getElementById('tempo-final').textContent = `Seu tempo: ${tempo} segundos`;
+
+<script>
+    console.log('Script do Leadboard carregado');
+    const tempoPartida = localStorage.getItem('tempoPartida');
+    
+    if (tempoPartida !== null) {
+        const tempoDiv = document.createElement('div');
+        tempoDiv.textContent = `Seu tempo: ${tempoPartida}s`;
+        tempoDiv.style.fontSize = '2rem';
+        tempoDiv.style.color = 'yellow';
+        tempoDiv.style.marginBottom = '20px';
+        tempoDiv.style.textAlign = 'center';
+
+        const titulo = document.getElementById('titulo');
+        titulo.insertAdjacentElement('afterend', tempoDiv);
     }
 </script>
 </body>

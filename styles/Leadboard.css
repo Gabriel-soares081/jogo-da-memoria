@@ -34,9 +34,3 @@ body {
     cursor: pointer;
 }
 
-.temporizador {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
